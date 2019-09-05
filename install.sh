@@ -8,4 +8,5 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 docker login --username=original_dk@163.com registry.cn-hangzhou.aliyuncs.com
 docker pull registry.cn-hangzhou.aliyuncs.com/dake/php:v1
+docker tag registry.cn-hangzhou.aliyuncs.com/dake/php:v1 dake/php:v1
 docker run --name workerman -p 80:5001 -v /home/wwwroot:/var/www -d dake/php:v1 /bin/bash start.sh
