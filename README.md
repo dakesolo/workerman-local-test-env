@@ -11,6 +11,8 @@ The installed file have a command like:
 
 So,you must upload your workerman projects to the host at `/home/wwwroot` first.
 
+Login the host with sftp 22,and create development project at phpstorm,specially turn on `auto upload`. 
+
 ##Some command
 `docker rmi ??`
 

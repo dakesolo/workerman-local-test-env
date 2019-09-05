@@ -6,6 +6,7 @@ setenforce 0
 sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 systemctl stop firewalld.service
 systemctl disable firewalld.service
+systemctl restart docker
 docker login --username=original_dk@163.com registry.cn-hangzhou.aliyuncs.com
 docker pull registry.cn-hangzhou.aliyuncs.com/dake/php:v1
 docker tag registry.cn-hangzhou.aliyuncs.com/dake/php:v1 dake/php:v1
