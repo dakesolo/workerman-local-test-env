@@ -8,6 +8,6 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 systemctl restart docker
 docker login --username=original_dk@163.com registry.cn-hangzhou.aliyuncs.com
-docker pull registry.cn-hangzhou.aliyuncs.com/dake/php:v1
-docker tag registry.cn-hangzhou.aliyuncs.com/dake/php:v1 dake/php:v1
-docker run --name workerman --restart=always -p 80:5001 -v /home/wwwroot:/var/www -d dake/php:v1 /bin/bash start.sh
+docker pull registry.cn-hangzhou.aliyuncs.com/dakesole/php:v2
+docker tag registry.cn-hangzhou.aliyuncs.com/dakesole/php:v2 dakesole/php:v2
+docker run --name workerman-spike --restart=always -p 80:5001 -v /home/wwwroot:/home/wwwroot -d dakesolo/php:v2 php think worker
