@@ -7,13 +7,24 @@ curl -sfL https://raw.githubusercontent.com/dakesolo/workerman-local-test-env/ma
 
 The installed file have a command like:  
 
-`docker run --name workerman-spike --restart=always -p 80:5001 -v /home/wwwroot:/home/wwwroot -d dakesolo/php:v2 php think worker`  
+```
+docker run --name workerman-spike --restart=always -p 80:5001 -v /home/wwwroot:/home/wwwroot -d dakesolo/php:v2 php think worker
+```  
 
 * So,you must upload your workerman projects to the host at `/home/wwwroot` first.  
 Login the host with sftp 22,and create development project at phpstorm,specially turn on `auto upload`.
 * port change.
-* container change. 
+* container change.  
 
+**--debug**  
+```$xslt
+docker logs -f workerman-spike --tail 100
+```
+**--restart**  
+ ```
+docker restart workerman-spike
+ ```
+ 
 ## Some command
 `docker rmi ??`  
 `docker images`  
